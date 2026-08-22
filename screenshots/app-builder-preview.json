@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Folio",
+      "hasCanvas": false,
+      "bodyTextLen": 237,
+      "bodyTextHash": "e1cc51a9d7cfd3cf69823b21e7b996474ef7bd21bdcdfeeab0041c214f161666",
+      "bodyTextPrefix": "F Folio AI Book Studio Import New book Give it an outline. Take ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Folio",
+      "hasCanvas": false,
+      "bodyTextLen": 393,
+      "bodyTextHash": "4cb1669f88ec97a072d8f840fcc0092acf2a11db8937dc9decced05f0e435513",
+      "bodyTextPrefix": "F Folio AI Book Studio New book Give it an outline. Take home a ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,165 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", "Source Serif 4", Georgia, serif;
+  --font-serif: "Source Serif 4", Georgia, "Times New Roman", serif;
+  --font-persian: "Vazirmatn", "Source Sans 3", sans-serif;
+
+  --color-background: #0c0b0a;
+  --color-foreground: #f2eee8;
+  --color-card: #161412;
+  --color-card-foreground: #f2eee8;
+  --color-popover: #1e1b18;
+  --color-popover-foreground: #f2eee8;
+  --color-primary: #d8d2c8;
+  --color-primary-foreground: #0c0b0a;
+  --color-secondary: #241f1b;
+  --color-secondary-foreground: #f2eee8;
+  --color-muted: #241f1b;
+  --color-muted-foreground: #9a9389;
+  --color-accent: #2a2520;
+  --color-accent-foreground: #f2eee8;
+  --color-destructive: #c45c4a;
+  --color-destructive-foreground: #f6f1e8;
+  --color-border: #2c2824;
+  --color-input: #2c2824;
+  --color-ring: #d8d2c8;
+  --color-paper: #f6f1e8;
+  --color-ink: #1c1814;
+  --color-ink-muted: #5c564e;
+  --color-success: #6a8f6d;
+
+  --radius-sm: 0.375rem;
+  --radius-md: 0.625rem;
+  --radius-lg: 0.875rem;
+  --radius-xl: 1.25rem;
+  --radius: 0.75rem;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  html,
+  body,
+  #app {
+    min-height: 100%;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    line-height: 1.5;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  textarea,
+  input,
+  select {
+    font-family: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-ring);
+    outline-offset: 2px;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 35%, transparent);
+    color: var(--color-foreground);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.font-persian {
+  font-family: var(--font-persian);
+}
+
+.paper-surface {
+  background: var(--color-paper);
+  color: var(--color-ink);
+}
+
+.manuscript-editor {
+  font-family: var(--font-serif);
+  font-size: 1.0625rem;
+  line-height: 1.7;
+  color: var(--color-ink);
+}
+
+[dir="rtl"] .manuscript-editor {
+  font-family: var(--font-persian);
+  line-height: 1.9;
+}
+
+.hairline {
+  box-shadow: 0 0 0 1px color-mix(in oklab, var(--color-foreground) 10%, transparent);
+}
+
+@keyframes folio-enter {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.folio-enter {
+  animation: folio-enter 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.folio-enter-delay-1 {
+  animation-delay: 40ms;
+}
+.folio-enter-delay-2 {
+  animation-delay: 80ms;
+}
+.folio-enter-delay-3 {
+  animation-delay: 120ms;
+}
+.folio-enter-delay-4 {
+  animation-delay: 160ms;
+}

@@ -1,0 +1,40 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Folio",
+      "hasCanvas": false,
+      "bodyTextLen": 400,
+      "bodyTextHash": "15d185ce6b32b519685b3a3e7c2775a7365009c7fc4fa996aafa04b6031521e1",
+      "bodyTextPrefix": "F Folio AI Book Studio Import New book Give it an outline. Take ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Folio",
+      "hasCanvas": false,
+      "bodyTextLen": 393,
+      "bodyTextHash": "4cb1669f88ec97a072d8f840fcc0092acf2a11db8937dc9decced05f0e435513",
+      "bodyTextPrefix": "F Folio AI Book Studio New book Give it an outline. Take home a ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": true,
+  "baselineReasons": [
+    "desktop: body text changed (237 -> 400 chars, hash mismatch)"
+  ]
+}
