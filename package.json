@@ -1,22 +1,25 @@
 {
-  "name": "app-builder-workspace",
+  "name": "folio-ai-book-studio",
   "private": true,
   "sideEffects": false,
   "type": "module",
+  "version": "1.0.0",
+  "description": "Folio — AI Book Studio. Write complete books chapter-by-chapter with AI and export professional DOCX.",
   "overrides": {
     "nf3": "0.3.17"
   },
   "scripts": {
-    "dev": "node scripts/with-app-env.mjs vite dev --host 0.0.0.0 --port 8080",
+    "dev": "vite dev --host 0.0.0.0 --port 8080",
     "build": "node scripts/with-app-env.mjs vite build && npm run db:migrate",
     "db:migrate": "node scripts/migrate.mjs",
     "build:dev": "node scripts/with-app-env.mjs vite build --mode development",
-    "preview": "node scripts/with-app-env.mjs vite preview",
+    "preview": "vite preview",
     "typecheck": "tsc --noEmit",
     "check:auth": "node scripts/check-auth-invariant.mjs",
     "test": "node --test 'scripts/**/*.test.mjs' && node --experimental-strip-types --test src/lib/app-data/app-data.test.ts src/lib/auth/gate-identity.test.ts src/lib/book/outline.test.ts src/lib/book/context.test.ts src/lib/book/quality.test.ts src/lib/book/storage.test.ts src/lib/document/docx.test.ts src/lib/ai/providers.test.ts",
     "lint": "eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "dev:env": "node scripts/with-app-env.mjs vite dev --host 0.0.0.0 --port 8080"
   },
   "dependencies": {
     "@electric-sql/pglite": "^0.5.4",
